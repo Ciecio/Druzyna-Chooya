@@ -46,7 +46,7 @@ html {
 	padding: 0 6%;
 	height: 70px;
 	width:100%;
-	background-image: url("../img/tlo\ karty.jpg");
+	background-image: url("tlo\ karty.jpg");
 	background-size: cover;
 	border: 3px solid #e6d220;
 	z-index: 100;
@@ -155,7 +155,7 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: url('../img/header4.webp');
+		background-image: url('header4.webp');
 		background-size: cover;
 		background-attachment: scroll;
 		height: 100vh;
@@ -181,7 +181,7 @@ html {
 		letter-spacing: .01em;
 		width: 1000px;
 		height: 180px;
-		background-image: url("../img/tlo\ karty.jpg");
+		background-image: url("tlo\ karty.jpg");
 		border: 5px solid #e6d220;
 		border-radius: 5px;
 	}
@@ -199,7 +199,7 @@ html {
 //ABOUTUS
 .aboutus {
 	position: relative;
-	background-image: url("../img/header5.jpg");
+	background-image: url("header5.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -222,7 +222,7 @@ html {
 .roster {
 	&__hero-img {
 		position: relative;
-		background-image: url('../img/roster3.webp');
+		background-image: url('roster3.webp');
 		background-size: cover;
 		background-position: center;
 		background-attachment: scroll;
@@ -254,7 +254,7 @@ html {
 		margin: 1em 1em;
 		width: 300px;
 		height: 600px;
-		background-image: url('../img/tlo karty.jpg');
+		background-image: url('tlo karty.jpg');
 		background-color: black;
 		background-size: cover;
 		background-attachment: scroll;
@@ -403,7 +403,7 @@ html {
 .moments {
 	position: relative;
 	background-color: rgb(31, 29, 29);
-	background-image: url('../img/header7.jpg');
+	background-image: url('header7.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -457,7 +457,7 @@ html {
 		height: 255px;
 		border: 1px solid #e6d220;
 		border-radius: 8px;
-		background-image: url('../img/tlo\ karty.jpg');
+		background-image: url('tlo\ karty.jpg');
 		background-size: cover;
 	}
 }
@@ -468,7 +468,7 @@ html {
 	flex-direction: column;
 	position: relative;
 	justify-content: center;
-	background-image: url("../img/quotes22.jpg");
+	background-image: url("quotes22.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -512,7 +512,7 @@ html {
 		font-size: .6rem;
 		letter-spacing: 0.2px;
 		border: 5px solid #b6a50c;
-		background-image: url("../img/tlo\ karty.jpg");
+		background-image: url("tlo\ karty.jpg");
 		background-size: cover;
 	}
 }
@@ -523,7 +523,7 @@ html {
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	background-image: url("../img/achievements.jpg");
+	background-image: url("achievements.jpg");
 	background-size: cover;
 	background-position: 70% 30%;
 	background-attachment: scroll;
@@ -546,7 +546,7 @@ html {
 		padding: 1em;
 		height: 200px;
 		width: 400px;
-		background-image:url("../img/tlo\ karty.jpg");
+		background-image:url("tlo\ karty.jpg");
 		border: 1px solid #e6d220;
 		border-radius: 18px;
 		font-size: 1rem;
@@ -556,7 +556,7 @@ html {
 //CONTACT
 .contact {
 	position: relative;
-	background-image: url('../img/contact.jpg');
+	background-image: url('contact.jpg');
 	background-size: cover;
 	background-position: 75% 25%;
 	background-attachment: scroll;
@@ -633,7 +633,7 @@ html {
 	align-items: center;
 	height: 40px;
 	width: 100%;
-	background-image: url("../img/tlo\ karty.jpg");
+	background-image: url("tlo\ karty.jpg");
 	background-size: cover;
 	font-size: 0.6rem;
 
@@ -665,7 +665,7 @@ html {
 			right: 0;
 			width: 150px;
 			height: 32vh;
-			background-image: url(../img/tlo\ karty.jpg);
+			background-image: url(tlo\ karty.jpg);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -866,7 +866,7 @@ html {
 			right: 0;
 			width: 240px;
 			height: 32vh;
-			background-image: url(../img/tlo\ karty.jpg);
+			background-image: url(tlo\ karty.jpg);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
