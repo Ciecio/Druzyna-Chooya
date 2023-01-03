@@ -639,6 +639,9 @@ html {
 }
 
 @media (min-width: 300px) and (max-width: 576px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .nav__logo {
     font-size: 0.6rem;
   }
