@@ -1,0 +1,987 @@
+@import 'animation';
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #e6d220;
+	list-style: none;
+	list-style-position: outside;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+	font-size: 1.6rem;
+	scroll-padding-top: 70px;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+	padding: 0 0.8em;
+	margin: 0 auto 0.1em;
+	font-weight: bold;
+	font-size: 1.7rem;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 10px 20px;
+	max-width: 1200px;
+	text-align: center;
+}
+
+// NAV
+.nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 6%;
+	height: 70px;
+	width:100%;
+	background-image: url("../img/tlo\ karty.jpg");
+	background-size: cover;
+	border: 3px solid #e6d220;
+	z-index: 100;
+	transition: all 0.5s ease;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		margin-right: 0.3em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: .85rem;
+		
+	}
+
+	&__navbar {
+		display: flex;
+	}
+
+	&__item {
+		padding: 0 1em;
+		transition: all .5s;
+		text-decoration: none;
+		font-size: 0.65rem;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #e6d220;
+
+		&:hover{
+			color: #fff;
+			transform: scale(1.2);
+		}
+	}
+
+	.fa-solid.fa-dog {
+		margin-right: 0.3em;
+	}
+
+	&__burger-btn {
+		position: fixed;
+		top: 0;
+		right: 220px;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000;
+		display: none;
+	
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			border-radius: 8px;
+		}
+	
+		&:hover {
+			&--bars::after,
+			&--bars::before {
+				width: 100%;
+			}
+		}
+	
+		&--box {
+			position: relative;
+			width: 40px;
+			height: 30px;
+		}
+	
+		&--bars,
+		&--bars::after,
+		&--bars::before {
+			position: absolute;
+			right: 0;
+			height: 3px;
+			content: '';
+			background-color: #e6d220;
+			transition: width 0.3s;
+		}
+	
+		&--bars {
+			width: 100%;
+	
+			&::after {
+				top: 13px;
+				width: 60%;
+			}
+	
+			&::before {
+				top: 27px;
+				width: 30%;
+				transition-delay: 0.1s;
+			}
+		}
+	}
+}
+
+
+
+//HEADER
+.header {
+	position: relative;
+	display: flex;
+
+	&__hero-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: url('../img/header4.webp');
+		background-size: cover;
+		background-attachment: scroll;
+		height: 100vh;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -10;
+	}
+
+	&__title {
+		padding: 10px 20px;
+		font-size: 4rem;
+		font-weight: bold;
+		text-align: center;
+		color:#dfca13;
+		font-style: oblique;
+		letter-spacing: .01em;
+		width: 1000px;
+		height: 180px;
+		background-image: url("../img/tlo\ karty.jpg");
+		border: 5px solid #e6d220;
+		border-radius: 5px;
+	}
+
+	&__arrow{
+		position: absolute;
+		bottom: 0;
+		padding: 10px 20px;
+		font-weight: bold;
+		font-size: 1.5rem;
+	
+	}
+}
+
+//ABOUTUS
+.aboutus {
+	position: relative;
+	background-image: url("../img/header5.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
+	z-index: 1;
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -10;
+	}
+
+	&__texxt{
+		font-size: 0.8rem;
+	}
+}
+
+//ROSTER
+.roster {
+	&__hero-img {
+		position: relative;
+		background-image: url('../img/roster3.webp');
+		background-size: cover;
+		background-position: center;
+		background-attachment: scroll;
+		z-index: 1;
+	}
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+
+	&__cardbox {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 1em;
+	}
+
+	&__card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin: 1em 1em;
+		width: 300px;
+		height: 600px;
+		background-image: url('../img/tlo karty.jpg');
+		background-color: black;
+		background-size: cover;
+		background-attachment: scroll;
+		background-position: center;
+		border: 2px solid #e6d220;
+		border-radius: 5%;
+		overflow: hidden;
+		transition: 1s;
+
+		&:hover {
+			transform: rotateY(-180deg);
+		}
+
+		&:hover .roster__avatar {
+			opacity: 0;
+		}
+
+		&:hover .roster__avatar2 {
+			opacity: 1;
+			transform: rotateY(180deg);
+		}
+
+		&:hover .roster__mains {
+			opacity: 0;
+		}
+
+		&:hover .roster__champs {
+			opacity: 0;
+		}
+
+		&:hover .roster__text {
+			opacity: 1;
+			transform: rotateY(180deg);
+		}
+
+		&:hover .roster__heading {
+			transform: rotateY(180deg);
+			left: -100%;
+		}
+
+		&:hover .roster__heading2 {
+			transform: rotateY(180deg);
+			opacity: 1;
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		margin: 0.5em;
+		background: none;
+		width: 300px;
+		height: 70px;
+		border-radius: 5%;
+	}
+
+	&__avatar {
+		position: absolute;
+		top: 80px;
+		width: 240px;
+		height: 300px;
+		border: 2px solid gold;
+		border-radius: 10px;
+		transition: 0.7s;
+	}
+	&__avatar2 {
+		position: absolute;
+		top: 80px;
+		width: 240px;
+		height: 300px;
+		border: 2px solid gold;
+		border-radius: 10px;
+		transition: 0.5s 0.75s;
+		opacity: 0;
+	}
+
+	&__heading {
+		position: absolute;
+		font-weight: bold;
+		letter-spacing: 1px;
+		font-size: 1.5rem;
+	}
+
+	&__heading2 {
+		position: absolute;
+		margin: .2em 0.2em 1em 0.2em;
+		padding: 1em;
+		font-weight: bold;
+		font-size: 0.8rem;
+		opacity: 0;
+		transition: 0.5s 0.5s;
+	}
+
+	&__text {
+		position: absolute;
+		top: 385px;
+		margin: 0 1.5em;
+		padding: 0.5em;
+		height: 180px;
+		transition: 0.5s 1s;
+		opacity: 0;
+		text-align:justify;
+		font-size: 0.6rem;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__champs {
+		position: absolute;
+		top: 460px;
+		height: 100px;
+		border: 3px solid #b6a50c;
+		border-radius: 50%;
+		transition: 0.7s;
+
+		&--left {
+			left: 5%;
+			height: 75px;
+		}
+
+		&--right {
+			right: 5%;
+			height: 75px;
+		}
+	}
+	&__mains {
+		position: absolute;
+		top: 360px;
+		margin: 1em;
+		font-size: 1.2rem;
+		font-weight: bold;
+		text-align: center;
+		color: #dfca13;
+		transition: 0.7s;
+	}
+}
+
+//MOMENTS
+
+.moments {
+	position: relative;
+	background-color: rgb(31, 29, 29);
+	background-image: url('../img/header7.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
+	z-index: 1;
+
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -10;
+	}
+
+	&__container {
+		position: relative;
+		margin: 0.5em 0.5em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		height: 270px;
+		width: 310px;
+
+	}
+	&__title {
+		position: absolute;
+		top: 5%;
+		margin: 0 0.4em;
+		font-size: 0.8rem;
+		text-align: center;
+		z-index: 100;
+
+		&--long {
+			font-size: 0.5rem;
+			top: 7%;
+		}
+	}
+
+	&__box {
+		margin: 0 auto;
+		padding-bottom: 1em;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 1200px;
+	}
+
+	&__video {
+		width: 300px;
+		height: 255px;
+		border: 1px solid #e6d220;
+		border-radius: 8px;
+		background-image: url('../img/tlo\ karty.jpg');
+		background-size: cover;
+	}
+}
+
+//QUOTES
+.quotes {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	background-image: url("../img/quotes22.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: scroll;
+	text-align-last: left;
+	z-index: 1;
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -10;
+	}
+
+	&__heading{
+		margin-bottom: 0.5em;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
+	&__img {
+		margin: 0.5em .3em;
+		height: 40px;
+		width: 40px;
+		border: 1px solid #e6d220;
+
+		&--small{
+			height: 30px;
+			width: 30px;
+		}
+	}
+
+	&__text {
+		padding: 10px 20px;
+		font-size: .6rem;
+		letter-spacing: 0.2px;
+		border: 5px solid #b6a50c;
+		background-image: url("../img/tlo\ karty.jpg");
+		background-size: cover;
+	}
+}
+
+//ACHIEVEMENTS
+.achievements {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../img/achievements.jpg");
+	background-size: cover;
+	background-position: 70% 30%;
+	background-attachment: scroll;
+	z-index: 1;
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -10;
+	}
+
+	&__btn {
+		margin: 1em;
+		padding: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+		height: 200px;
+		width: 400px;
+		background-image:url("../img/tlo\ karty.jpg");
+		border: 1px solid #e6d220;
+		border-radius: 18px;
+		font-size: 1rem;
+	}
+}
+
+//CONTACT
+.contact {
+	position: relative;
+	background-image: url('../img/contact.jpg');
+	background-size: cover;
+	background-position: 75% 25%;
+	background-attachment: scroll;
+	z-index: 1;
+
+	&__hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -10;
+	}
+
+	&__heading{
+		margin-bottom: 0.5em;
+	}
+
+	&__head {
+		font-size: 1.3rem;
+		padding: 0 1em;
+	}
+
+	&__data {
+		display: flex;
+		flex-direction: column;
+		z-index: 1;
+	}
+
+	.fa-brands,
+	.fa-regular {
+		margin: 0.2em 0.5em;
+		font-size: 1rem;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0 auto .1em;
+		max-width: 1200px;
+	}
+
+	&__text {
+		margin: 0.15em;
+		text-decoration: none;
+		color: #e6d220;
+		font-size: 0.8rem;
+		z-index: -50;
+		transition: .5s;
+
+		&:hover{
+			color:#fff;
+			transform: scale(1.2);
+		}
+
+		&:hover .fa-brands
+		{
+			color: #fff;
+		}
+		&:hover .fa-regular
+		{
+			color: #fff;
+		}
+	}
+}
+
+//FOOTER
+.footer {
+	margin: 0;
+	position: relative;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	background-image: url("../img/tlo\ karty.jpg");
+	background-size: cover;
+	font-size: 0.6rem;
+
+	&__title {
+		margin: auto;
+		font-weight: bold;
+	}
+}
+
+
+//MEDIA
+@media (min-width: 300px) and (max-width: 576px) {
+	.nav {
+		&__logo{
+			font-size: 0.6rem;
+		}
+
+		&__item {
+			display: block;
+			margin: 3px 0;
+			padding: 10px 25px;
+			transition: 0.5s;
+			font-size: 0.42rem;
+		}
+
+		&__navbar {
+			position: absolute;
+			top: 115%;
+			right: 0;
+			width: 150px;
+			height: 32vh;
+			background-image: url(../img/tlo\ karty.jpg);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-content: flex-start;
+			border: 3px solid #e6d220;
+			border-radius: 10px;
+			transition: 0.5s;
+			transform: translateX(120%);
+
+			&--active{
+				transform: translateX(0);
+			}
+		}
+
+		&__burger-btn{
+			display: block;
+			right: 0;
+			top: -15%;
+		}
+	}
+
+	.heading {
+		font-size: 1.3rem;
+	}
+
+	.header {
+		&__title {
+			font-size: 2rem;
+			width: 2500px;
+			height: 170px;
+		}
+	}
+
+	.quotes {
+		&__text {
+			font-size: 0.6rem;
+		}
+	}
+
+	.roster{
+		&__card{
+			height: 430px;
+			width: 250px;
+		}
+
+		&__avatar, &__avatar2{
+			top: 70px;
+			width: 170px;
+			height: 220px;
+		}
+
+		&__heading{
+			top: 10px;
+			font-size: 1rem;
+		}
+
+		&__heading2{
+			position: absolute;
+			top: -10%;
+			font-size: 0.6rem;
+			margin: 0 1.5em;
+		}
+
+		&__mains{
+			position: absolute;
+			top: 285px;
+			font-size: 0.9rem;
+		}
+
+		&__champs{
+			position: absolute;
+			top: 350px;
+			width:60px;
+			height:60px;
+
+			&--right{
+				width: 50px;
+				height: 50px;
+			}
+		
+			&--left{
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		&__text{
+			position: absolute;
+			top: 300px;
+			height: 130px;
+			font-size: 0.4rem;
+		}
+	}
+	
+
+	.moments {
+		&__heading {
+			margin-bottom: 0.2em;
+		}
+		&__box {
+			width: 280px;
+			display: flex;
+			justify-content: center;
+		}
+
+		&__video {
+			width: 240px;
+			height: 210px;
+			margin-bottom: 5em;
+		}
+
+		&__title {
+			position: absolute;
+			top: 3%;
+			font-size: 0.6rem;
+
+			&--long {
+				position: absolute;
+				top: 5%;
+				font-size: 0.4rem;
+			}
+		}
+
+		&__container {
+			height: 220px;
+		}
+	}
+
+	.achievements{
+		&__btn{
+			width: 250px;
+			height: 150px;
+			font-size: 0.8rem;
+		}
+	}
+
+	.contact {
+		&__head{
+			font-size: 1rem;
+		}
+		&__text {
+			font-size: 0.6rem;
+
+			.fa-brands,
+			.fa-regular {
+				margin: 0.3em 0.5em;
+				font-size: .8rem;
+			}
+		}
+	}
+
+	.footer {
+		font-size: 0.5rem;
+
+		&__title {
+			margin: auto;
+		}
+	}
+
+	.aboutus{
+		&__texxt{
+			font-size: .5rem;
+		}
+	}
+}
+
+@media(min-width: 454px) and (max-width:576px){
+	.header{
+		&__title{
+			width:500px;
+			height: 90px;
+		}
+	}
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+	.heading{
+		font-size: 1.5rem;
+	}
+
+	.nav {
+		&__logo{
+			font-size: 0.7rem;
+		}
+
+		&__item {
+			display: block;
+			margin: 3px 0;
+			padding: 10px 25px;
+			transition: 0.5s;
+			font-size: 0.45rem;
+		}
+
+		&__navbar {
+			position: absolute;
+			top: 125%;
+			right: 0;
+			width: 240px;
+			height: 32vh;
+			background-image: url(../img/tlo\ karty.jpg);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-content: flex-start;
+			border: 3px solid #e6d220;
+			border-radius: 10px;
+			transition: 0.5s;
+			transform: translateX(120%);
+
+			&--active{
+				transform: translateX(0);
+			}
+		}
+
+		&__burger-btn{
+			display: block;
+			right: 0;
+			top: -15%;
+		}
+	}
+
+
+.header{
+	&__title{
+		font-size: 2.5rem;
+		width: 625px;
+		height: 112px;
+	}
+}
+
+.aboutus{
+	&__texxt{
+		font-size: 0.6rem;
+	}
+}
+
+.contact{
+	&__head{
+		font-size: 1.2rem;
+	}
+	&__text {
+		font-size: 0.7rem;
+
+		.fa-brands,
+		.fa-regular {
+			margin: 0.3em 0.5em;
+			font-size: .9rem;
+		}
+	}
+}
+}
+
+@media(min-width:568px) and (max-width:640px){
+	.header{
+		&__title{
+			width: 560px;
+			height: 112px;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.nav {
+		padding: 0 2%;
+
+		&__logo{
+			font-size: 0.55rem;
+		}
+
+		&__item {
+			font-size: 0.45rem;
+		}
+
+		&__burger-btn{
+			display: none;
+		}
+	}
+
+	.header{
+		&__title{
+			font-size: 3rem;
+			width: 750px;
+			height: 135px;
+		}
+	}
+
+	.aboutus{
+		&__texxt{
+			font-size: 0.7rem;
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.nav {
+		padding: 0 3%;
+
+		&__logo{
+			font-size: 0.65em;
+		}
+
+		&__item {
+			font-size: 0.55rem;
+		}
+
+		&__burger-btn{
+			display: none;
+		}
+	}
+
+	.header{
+		&__title{
+			width: 875px;
+			height: 158px;
+			font-size: 3.5rem;
+		}
+	}
+}
