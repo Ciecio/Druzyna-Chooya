@@ -161,6 +161,7 @@ html {
 		background-image: url('header4.webp');
 		background-size: cover;
 		background-attachment: scroll;
+		background-position: center;
 		height: 100vh;
 		width: 100%;
 		z-index: 1;
@@ -491,9 +492,6 @@ html {
 	}
 
 	&__box {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
 		margin: 0 auto;
 		max-width: 1200px;
 	}
@@ -517,6 +515,7 @@ html {
 		border: 5px solid #b6a50c;
 		background-image: url("tlo\ karty.jpg");
 		background-size: cover;
+		text-align: justify;
 	}
 }
 
